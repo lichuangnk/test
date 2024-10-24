@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script>
+        function copyText() {
+            const url = document.getElementById("field1").value;
+            const name = document.getElementById("field2").value;
+            const aa = document.createElement("a");
+            aa.innerHTML = name;
+            aa.href = url;
+            aa.target = "_blank";
+            document.body.appendChild(aa);
+            const br = document.createElement("br");
+            document.body.appendChild(br);
+        }
+    </script>
+</head>
+
+<body>
+    超链接: <input type="text" id="field1" value="ctripglobal://">
+    <br>
+    名字: <input type="text" id="field2">
+    <br>
+    <button onclick="copyText()">添加</button>
+    <br>
+    <a href="ctripglobal://FlightSearch" target="_blank">机票首页</a>
+    <br>
+
+</body>
+
+</html>
